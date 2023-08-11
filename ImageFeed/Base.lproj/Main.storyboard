@@ -5,20 +5,87 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ImageList-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ImageList" id="BYZ-38-t0r" customClass="ImagesListViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nat-Qo-Y1B">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="10" reuseIdentifier="ImagesListCell" rowHeight="268" id="uXO-oO-NtS" customClass="ImagesListCell" customModule="ImageFeed" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="268"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uXO-oO-NtS" id="cVU-6J-0R5">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="268"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="TbE-Et-rzP">
+                                                    <rect key="frame" x="16" y="4" width="361" height="260"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22 августа 2023" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lct-w6-cT0">
+                                                    <rect key="frame" x="23.999999999999993" y="240.33333333333334" width="102.33333333333331" height="15.666666666666657"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heH-ly-zs3">
+                                                    <rect key="frame" x="309" y="4" width="68" height="58"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="68" id="6b7-3G-3LG"/>
+                                                        <constraint firstAttribute="height" constant="58" id="Ayj-x8-EuM"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="like_button_on"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="TbE-Et-rzP" firstAttribute="bottom" secondItem="Lct-w6-cT0" secondAttribute="bottom" constant="8" id="0P5-rc-L0z"/>
+                                                <constraint firstItem="TbE-Et-rzP" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lct-w6-cT0" secondAttribute="trailing" constant="8" id="44w-QJ-Lux"/>
+                                                <constraint firstItem="TbE-Et-rzP" firstAttribute="trailing" secondItem="heH-ly-zs3" secondAttribute="trailing" id="7T5-tL-pq4"/>
+                                                <constraint firstItem="TbE-Et-rzP" firstAttribute="leading" secondItem="cVU-6J-0R5" secondAttribute="leading" constant="16" id="BQl-lO-eVf"/>
+                                                <constraint firstItem="heH-ly-zs3" firstAttribute="top" secondItem="TbE-Et-rzP" secondAttribute="top" id="Nkg-Fx-yKm"/>
+                                                <constraint firstAttribute="bottom" secondItem="TbE-Et-rzP" secondAttribute="bottom" constant="4" id="P7b-p0-65J"/>
+                                                <constraint firstItem="TbE-Et-rzP" firstAttribute="top" secondItem="cVU-6J-0R5" secondAttribute="top" constant="4" id="eUD-tb-o4E"/>
+                                                <constraint firstAttribute="trailing" secondItem="TbE-Et-rzP" secondAttribute="trailing" constant="16" id="kGD-9M-6Pu"/>
+                                                <constraint firstItem="Lct-w6-cT0" firstAttribute="leading" secondItem="TbE-Et-rzP" secondAttribute="leading" constant="8" id="mno-b5-IdY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="cellImage" destination="TbE-Et-rzP" id="SaV-u0-3kH"/>
+                                            <outlet property="dateLabel" destination="Lct-w6-cT0" id="yCp-cT-jap"/>
+                                            <outlet property="likeButton" destination="heH-ly-zs3" id="bxU-rc-vY6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="raC-tA-vn7"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vVg-1r-kQI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nat-Qo-Y1B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="08e-Zh-UM4"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="nat-Qo-Y1B" secondAttribute="bottom" id="7eP-ef-Xkx"/>
+                            <constraint firstItem="nat-Qo-Y1B" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Kvj-eH-ZUX"/>
+                            <constraint firstItem="nat-Qo-Y1B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Z9r-4b-Tgd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="nat-Qo-Y1B" id="RWo-sG-cVf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -26,8 +93,7 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="0" width="200" height="132"/>
+        <image name="like_button_on" width="44" height="44"/>
     </resources>
 </document>
