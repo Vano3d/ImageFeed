@@ -14,6 +14,7 @@
 		02CA44B12A72FC4600D11C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02CA44B02A72FC4600D11C25 /* Assets.xcassets */; };
 		02CA44B42A72FC4600D11C25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02CA44B22A72FC4600D11C25 /* LaunchScreen.storyboard */; };
 		02CA44DC2A7AD71500D11C25 /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CA44DB2A7AD71500D11C25 /* ImagesListCell.swift */; };
+		02CA44E02A8770D200D11C25 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CA44DF2A8770D200D11C25 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		02CA44B32A72FC4600D11C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02CA44B52A72FC4600D11C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02CA44DB2A7AD71500D11C25 /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
+		02CA44DF2A8770D200D11C25 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				02CA44B02A72FC4600D11C25 /* Assets.xcassets */,
 				02CA44B22A72FC4600D11C25 /* LaunchScreen.storyboard */,
 				02CA44B52A72FC4600D11C25 /* Info.plist */,
+				02CA44DE2A8770BD00D11C25 /* Profule */,
 				02CA44DD2A7AD75800D11C25 /* ImagesList */,
 			);
 			path = ImageFeed;
@@ -76,6 +79,14 @@
 				02CA44DB2A7AD71500D11C25 /* ImagesListCell.swift */,
 			);
 			path = ImagesList;
+			sourceTree = "<group>";
+		};
+		02CA44DE2A8770BD00D11C25 /* Profule */ = {
+			isa = PBXGroup;
+			children = (
+				02CA44DF2A8770D200D11C25 /* ProfileViewController.swift */,
+			);
+			path = Profule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 			files = (
 				02CA44AC2A72FC4500D11C25 /* ImagesListViewController.swift in Sources */,
 				02CA44DC2A7AD71500D11C25 /* ImagesListCell.swift in Sources */,
+				02CA44E02A8770D200D11C25 /* ProfileViewController.swift in Sources */,
 				02CA44A82A72FC4500D11C25 /* AppDelegate.swift in Sources */,
 				02CA44AA2A72FC4500D11C25 /* SceneDelegate.swift in Sources */,
 			);
