@@ -14,11 +14,11 @@
             <objects>
                 <viewController title="ImageList" id="BYZ-38-t0r" customClass="ImagesListViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nat-Qo-Y1B">
-                                <rect key="frame" x="0.0" y="91" width="390" height="670"/>
+                                <rect key="frame" x="0.0" y="47" width="390" height="714"/>
                                 <color key="backgroundColor" name="YP Black"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="10" reuseIdentifier="ImagesListCell" rowHeight="268" id="uXO-oO-NtS" customClass="ImagesListCell" customModule="ImageFeed" customModuleProvider="target">
@@ -84,10 +84,11 @@
                             <constraint firstItem="nat-Qo-Y1B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Z9r-4b-Tgd"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="tab_editorial_active" id="hCl-r3-oFv"/>
                     <navigationItem key="navigationItem" id="Qr7-pa-Uz7"/>
                     <connections>
                         <outlet property="tableView" destination="nat-Qo-Y1B" id="RWo-sG-cVf"/>
-                        <segue destination="vkA-sI-Fn6" kind="show" identifier="ShowSingleImage" id="KbV-Vi-ohN"/>
+                        <segue destination="vkA-sI-Fn6" kind="presentation" identifier="ShowSingleImage" id="KbV-Vi-ohN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -98,9 +99,10 @@
         <scene sceneID="aoC-Lf-b60">
             <objects>
                 <tabBarController id="6Nj-jo-TGr" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="wzs-vd-4y4">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wzs-vd-4y4">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="YP White"/>
                         <color key="selectedImageTintColor" name="YP White"/>
                         <tabBarAppearance key="standardAppearance">
@@ -108,20 +110,20 @@
                         </tabBarAppearance>
                     </tabBar>
                     <connections>
-                        <segue destination="mXe-n1-RHj" kind="relationship" relationship="viewControllers" id="Efe-jb-J9Y"/>
-                        <segue destination="jfR-VJ-S2O" kind="relationship" relationship="viewControllers" id="mVv-Ii-A0j"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="W9W-Gd-KcV"/>
+                        <segue destination="jfR-VJ-S2O" kind="relationship" relationship="viewControllers" id="wPG-7Q-hhh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azT-b6-nEK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1697" y="-2"/>
+            <point key="canvasLocation" x="-1000" y="-46"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="ufZ-ng-1Qc">
             <objects>
                 <viewController id="jfR-VJ-S2O" customClass="ProfileViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H3F-FG-38Q">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="256" translatesAutoresizingMaskIntoConstraints="NO" id="rpr-GH-vKE">
@@ -190,27 +192,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sFZ-0h-TD5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-735" y="269"/>
+            <point key="canvasLocation" x="194" y="353"/>
         </scene>
         <!--Single Image View Controller-->
         <scene sceneID="iDH-QU-DtW">
             <objects>
-                <viewController id="vkA-sI-Fn6" customClass="SingleImageViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="vkA-sI-Fn6" customClass="SingleImageViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jsc-se-Qle">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="xwa-Mc-Zt7">
-                                <rect key="frame" x="0.0" y="91" width="390" height="670"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaU-pX-AX6">
+                                <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="7kY-xK-EJd"/>
+                                    <constraint firstAttribute="height" constant="48" id="A1d-Fp-Ck8"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="backward_button"/>
+                                <connections>
+                                    <action selector="didTapBackButton" destination="vkA-sI-Fn6" eventType="touchUpInside" id="Cwf-Uw-VIq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QGb-nE-89u"/>
                         <color key="backgroundColor" name="YP Black"/>
                         <constraints>
-                            <constraint firstItem="QGb-nE-89u" firstAttribute="trailing" secondItem="xwa-Mc-Zt7" secondAttribute="trailing" id="5ik-yy-GXF"/>
-                            <constraint firstItem="xwa-Mc-Zt7" firstAttribute="leading" secondItem="QGb-nE-89u" secondAttribute="leading" id="Iaa-tP-FBB"/>
-                            <constraint firstItem="xwa-Mc-Zt7" firstAttribute="top" secondItem="QGb-nE-89u" secondAttribute="top" id="dlg-JY-j6j"/>
-                            <constraint firstItem="QGb-nE-89u" firstAttribute="bottom" secondItem="xwa-Mc-Zt7" secondAttribute="bottom" id="uGb-4w-fvG"/>
+                            <constraint firstItem="VaU-pX-AX6" firstAttribute="top" secondItem="QGb-nE-89u" secondAttribute="top" constant="8" id="0b9-Qc-8bj"/>
+                            <constraint firstAttribute="trailing" secondItem="xwa-Mc-Zt7" secondAttribute="trailing" id="5ik-yy-GXF"/>
+                            <constraint firstItem="VaU-pX-AX6" firstAttribute="leading" secondItem="QGb-nE-89u" secondAttribute="leading" constant="8" id="EFG-mk-SAd"/>
+                            <constraint firstItem="xwa-Mc-Zt7" firstAttribute="leading" secondItem="Jsc-se-Qle" secondAttribute="leading" id="Iaa-tP-FBB"/>
+                            <constraint firstItem="xwa-Mc-Zt7" firstAttribute="top" secondItem="Jsc-se-Qle" secondAttribute="top" id="dlg-JY-j6j"/>
+                            <constraint firstAttribute="bottom" secondItem="xwa-Mc-Zt7" secondAttribute="bottom" id="uGb-4w-fvG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iy9-z5-XdS"/>
@@ -222,36 +238,12 @@
             </objects>
             <point key="canvasLocation" x="1074" y="-388"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Nqj-77-Vc8">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mXe-n1-RHj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="tab_editorial_active" id="aDd-fH-IYO"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pi3-Ad-ZGT">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="YP Black"/>
-                        <color key="tintColor" name="YP White"/>
-                        <color key="barTintColor" name="YP White"/>
-                        <navigationBarAppearance key="standardAppearance">
-                            <color key="backgroundColor" name="YP Black"/>
-                        </navigationBarAppearance>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Gyd-ky-7LA"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pdW-yt-oxR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-735.38461538461536" y="-388.15165876777252"/>
-        </scene>
     </scenes>
     <resources>
         <image name="0" width="200" height="132"/>
         <image name="Avatar" width="70" height="70"/>
         <image name="Logout btn" width="20" height="22"/>
+        <image name="backward_button" width="24" height="24"/>
         <image name="like_button_on" width="44" height="44"/>
         <image name="tab_editorial_active" width="30" height="30"/>
         <image name="tab_profile_active" width="30" height="30"/>
