@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet var avatarImage: UIImageView!
     
     @IBOutlet var logoutButton: UIButton!
-    @IBAction func logoutButtonTapped(sender: UIButton!) {
-        print("Hello")
+    @IBAction func logoutButtonTapped() {
+        
     }
 }
