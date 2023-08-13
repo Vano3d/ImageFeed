@@ -10,12 +10,23 @@ class ImagesListViewController: UIViewController {
     
     private let photosName: [String] = Array(0..<20).map{ "\($0)" }
     override var preferredStatusBarStyle: UIStatusBarStyle {
-            return .lightContent
-        }
-
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowSingleImage" { // 1
+            let viewController = segue.destination as! SingleImageViewController // 2
+            let indexPath = sender as! IndexPath // 3
+            let image = UIImage(named: photosName[indexPath.row]) // 4
+            viewController.imageView.image = image // 5
+        } else {
+            super.prepare(for: segue, sender: sender) // 6
+        }
     }
     
     private lazy var dateFormatter: DateFormatter = {
@@ -76,4 +87,10 @@ extension ImagesListViewController: UITableViewDelegate {
         let cellHeight = image.size.height * scale + imageInsets.top + imageInsets.bottom
         return cellHeight
     }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ShowSingleImage", sender: indexPath)
+    }
+    
 }
+
