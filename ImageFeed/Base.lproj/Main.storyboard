@@ -38,10 +38,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heH-ly-zs3">
-                                                    <rect key="frame" x="309" y="4" width="68" height="58"/>
+                                                    <rect key="frame" x="333" y="4" width="44" height="44"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="68" id="6b7-3G-3LG"/>
-                                                        <constraint firstAttribute="height" constant="58" id="Ayj-x8-EuM"/>
+                                                        <constraint firstAttribute="width" constant="44" id="6b7-3G-3LG"/>
+                                                        <constraint firstAttribute="height" constant="44" id="Ayj-x8-EuM"/>
                                                     </constraints>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="like_button_on"/>
