@@ -1,3 +1,7 @@
+//  ImageFeed
+//
+//  Created by Ivan Ch on 27.07.2023.
+//
 
 import UIKit
 
@@ -5,12 +9,13 @@ class ImagesListViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
     
     private let photosName: [String] = Array(0..<20).map{ "\($0)" }
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+            return .lightContent
+        }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
-        
-        
     }
     
     private lazy var dateFormatter: DateFormatter = {
@@ -19,7 +24,6 @@ class ImagesListViewController: UIViewController {
         formatter.timeStyle = .none
         return formatter
     }()
-    
 }
 
 extension ImagesListViewController: UITableViewDataSource {
@@ -48,6 +52,7 @@ extension ImagesListViewController {
         cell.cellImage.image = image
         cell.dateLabel.text = dateFormatter.string(from: Date())
         cell.cellImage.layer.cornerRadius = 16
+        cell.cellImage.layer.masksToBounds = true
         
         let isLiked = indexPath.row % 2 == 0
         let likeImage = isLiked ? UIImage(named: "like_button_on") : UIImage(named: "like_button_off")

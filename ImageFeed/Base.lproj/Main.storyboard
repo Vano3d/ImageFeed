@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nat-Qo-Y1B">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="10" reuseIdentifier="ImagesListCell" rowHeight="268" id="uXO-oO-NtS" customClass="ImagesListCell" customModule="ImageFeed" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="10" reuseIdentifier="ImagesListCell" rowHeight="268" id="uXO-oO-NtS" customClass="ImagesListCell" customModule="ImageFeed" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="268"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uXO-oO-NtS" id="cVU-6J-0R5">
@@ -38,10 +38,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heH-ly-zs3">
-                                                    <rect key="frame" x="309" y="4" width="68" height="58"/>
+                                                    <rect key="frame" x="333" y="4" width="44" height="44"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="68" id="6b7-3G-3LG"/>
-                                                        <constraint firstAttribute="height" constant="58" id="Ayj-x8-EuM"/>
+                                                        <constraint firstAttribute="width" constant="44" id="6b7-3G-3LG"/>
+                                                        <constraint firstAttribute="height" constant="44" id="Ayj-x8-EuM"/>
                                                     </constraints>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="like_button_on"/>
@@ -78,9 +78,9 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="nat-Qo-Y1B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="08e-Zh-UM4"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="nat-Qo-Y1B" secondAttribute="bottom" id="7eP-ef-Xkx"/>
-                            <constraint firstItem="nat-Qo-Y1B" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Kvj-eH-ZUX"/>
+                            <constraint firstItem="nat-Qo-Y1B" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Tdn-Qw-P4l"/>
                             <constraint firstItem="nat-Qo-Y1B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Z9r-4b-Tgd"/>
+                            <constraint firstAttribute="bottom" secondItem="nat-Qo-Y1B" secondAttribute="bottom" id="bqg-ID-ebu"/>
                         </constraints>
                     </view>
                     <connections>
